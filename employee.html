@@ -1,0 +1,45 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+</head>
+<body>
+    <h2>Employee Management System</h2>
+
+    <form id="myform">
+        Employee Name:
+        <input type="text" id="name" required>
+        <br><br>
+
+        Employee ID:
+        <input type="text" id="id" required>
+        <br><br>
+
+        Employee Age:
+        <input type="number" id="age" required>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("myform").onsubmit = function(event) {
+            event.preventDefault();
+
+            var name = document.getElementById("name").value;
+            var id = document.getElementById("id").value;
+            var age = document.getElementById("age").value;
+
+            document.getElementById("message").innerHTML =
+                "Submitted Successfully!<br>" +
+                "Name: " + name + "<br>" +
+                "ID: " + id + "<br>" +
+                "Age: " + age;
+        };
+    </script>
+</body>
+</html>
+```
